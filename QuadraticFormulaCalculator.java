@@ -19,11 +19,13 @@ public class QuadraticFormulaCalculator {
         short four = (short) (4 * variables.get(0) * variables.get(2));
         short squareRootNum = (short) (square - four);
         float squareRoot = (float) Math.pow(squareRootNum, 0.5);
-        int b = -variables.get(1);
+        short b = (short) -variables.get(1);
+
         float positiveAbove = b + squareRoot;
         float negativeAbove = b - squareRoot;
-        float firstSolution = positiveAbove / (2 * variables.get(0));
-        float secondSolution = negativeAbove / (2 * variables.get(0));
+        float firstSolution = positiveAbove / (2 * variables.getFirst());
+        float secondSolution = negativeAbove / (2 * variables.getFirst());
+
         System.out.println("There's your results: the first solution is: " + d1.format(firstSolution) + " and the second solution is: " + d1.format(secondSolution));
         sc.close();
         System.exit(0);
