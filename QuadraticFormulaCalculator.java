@@ -15,9 +15,9 @@ public class QuadraticFormulaCalculator {
         }
         System.out.println("a: " + variables.get(0) + ", b: " + variables.get(1) + ", c: " + variables.get(2));
 
-        int square = (int) Math.pow(variables.get(1), 2);
-        int four = 4 * variables.get(0) * variables.get(2);
-        int squareRootNum = square - four;
+        short square = (short) Math.pow(variables.get(1), 2);
+        short four = (short) (4 * variables.get(0) * variables.get(2));
+        short squareRootNum = (short) (square - four);
         float squareRoot = (float) Math.pow(squareRootNum, 0.5);
         int b = -variables.get(1);
         float positiveAbove = b + squareRoot;
